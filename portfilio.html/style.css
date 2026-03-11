@@ -1,0 +1,96 @@
+h3{
+    color : green;
+}
+
+button{
+    color : pink;
+}
+
+body{
+    background-color: bisque;
+}
+
+button{
+    background-color: aquamarine;
+}
+
+body{
+    background-color: #ff0000;
+}
+
+body{
+    background-color: rgb(112, 105, 120);
+}
+
+#headingfour {
+    color : chocolate;
+}
+
+p{
+    text-align: left;
+    text-align: start;
+
+    text-align: right;
+    text-align: end;
+
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    text-decoration: underline;
+    text-decoration: overline;
+    text-decoration: line-through;
+    text-decoration: red underline;
+}
+
+h1{
+    font-weight: normal;
+}
+
+h2{
+    font-weight: bold;
+}
+
+h3{
+    font-weight: lighter;
+}
+
+h4{
+   font-weight: bolder;
+}
+
+#one{
+    font-family: Arial, Helvetica, sans-serif;  /* if one languge is not working another will work*/
+}
+
+#two{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#three{
+    font-size: 25px;
+    text-align: left;
+}
+#four{
+    font-size: 20px;
+    text-align: left;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+#five{
+    text-align: left;
+    line-height: 50px;
+    text-transform: uppercase;
+   
+}
+
+ /* text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: capitalize; */
+
+    *{
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    /* for all text universal */
