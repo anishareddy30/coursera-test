@@ -1,0 +1,51 @@
+<!-- Create a JavaScript program that declares an array of numbers (e.g., [10, 20, 30]). The
+program should accept a number from the user, check if the number is already present
+in the array, and if not, add it to the array. Finally, display the updated array on the web
+page in ascending order.
+Hint: Code must demonstrate the manipulation of numeric arrays, including adding
+elements, checking for duplicates, and sorting the array, which are common tasks in
+JavaScript programming -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Number Array Example</title>
+</head>
+
+<body>
+
+<h2>JavaScript Number Array</h2>
+
+Enter Number:
+<input type="number" id="num">
+<button onclick="checkNumber()">Submit</button>
+
+<p id="output"></p>
+
+<script>
+
+function checkNumber(){
+
+    let arr = [10,20,30];  // Current array
+
+    let num = parseInt(document.getElementById("num").value);
+
+    let text = "Current Number Array: " + arr + "<br>";
+    text += "Entered Number: " + num + "<br>";
+
+    if(arr.includes(num)){
+        text += "Number already exists in array.";
+    }
+    else{
+        arr.push(num);  // Add number
+        arr.sort(function(a,b){ return a-b; });  // Ascending order
+        text += "Array After Adding Number: " + arr;
+    }
+
+    document.getElementById("output").innerHTML = text;
+}
+
+</script>
+
+</body>
+</html>

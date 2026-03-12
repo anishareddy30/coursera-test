@@ -1,0 +1,132 @@
+  <!-- Create a colorful and interactive web page using HTML and CSS, serving as a travel guide
+for Pune. The page should feature a main heading titled "Pune Travel Guide," followed by
+a section containing a list of hyperlinks (styled as buttons) to famous places in Pune, with
+brief descriptions and external links. Additionally, include a card-like section showcasing
+an ordered list of five popular activities to do in Pune. The design should incorporate a
+gradient background, and stylish hover effects for both the hyperlinks and list items, and
+the card section should have rounded corners, box shadows, and a slight hover elevation
+for visual appeal. -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pune Travel Guide</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(to right,#ffcc99,#ff9966);
+margin:0;
+text-align:center;
+}
+
+h1{
+background-color:orange;
+color:white;
+padding:15px;
+}
+
+.places{
+width:70%;
+margin:20px auto;
+text-align:left;
+}
+
+.places ol li{
+margin:10px 0;
+}
+
+.places a{
+text-decoration:none;
+color:black;
+font-weight:bold;
+}
+
+.places a:hover{
+color:red;
+}
+
+/* White card box */
+.card{
+background:white;
+width:80%;
+margin:40px auto;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px gray;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h2{
+color:orange;
+}
+
+ol.activities li{
+padding:6px;
+}
+
+ol.activities li:hover{
+color:red;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Welcome to Pune Guide</h1>
+
+<h2>Explore Pune's Famous Places</h2>
+
+<div class="places">
+
+<ol>
+
+<li>
+<a href="https://en.wikipedia.org/wiki/Shaniwar_Wada" target="_blank">Shaniwar Wada</a>  
+– Historic fort built in 1732 and one of Pune’s most famous landmarks.
+</li>
+
+<li>
+<a href="https://en.wikipedia.org/wiki/Rajiv_Gandhi_Zoological_Park" target="_blank">Rajiv Gandhi Zoo</a>  
+– A popular zoo in Pune with many animals, birds and reptiles.
+</li>
+
+<li>
+<a href="https://en.wikipedia.org/wiki/Saras_Baug" target="_blank">Saras Baug</a>  
+– A peaceful garden with a famous Ganpati temple.
+</li>
+
+<li>
+<a href="https://en.wikipedia.org/wiki/Aga_Khan_Palace" target="_blank">Aga Khan Palace</a>  
+– A historical palace connected with Mahatma Gandhi.
+
+</li>
+
+</ol>
+
+</div>
+
+<div class="card">
+
+<h2>Best Things to Do in Pune</h2>
+
+<ol class="activities">
+<li>Visit historical forts and palaces</li>
+<li>Explore famous Pune street food</li>
+<li>Relax in beautiful gardens</li>
+<li>Visit museums and cultural places</li>
+<li>Enjoy shopping in local markets</li>
+</ol>
+
+</div>
+
+</body>
+</html>

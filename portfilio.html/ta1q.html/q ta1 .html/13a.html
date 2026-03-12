@@ -1,0 +1,71 @@
+<!-- Question No: 13
+A. Write a basic HTML Script using Simple image HTML tags for performing the various
+operations on images as shown in below output (take images of your choice) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Operations</title>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+}
+
+/* Large image */
+.large{
+width:50%;
+height:auto;
+}
+
+/* Row for 3 images */
+.row{
+display:flex;
+justify-content:space-around;
+margin-top:20px;
+}
+
+/* Circular image */
+.circle{
+width:150px;
+height:150px;
+border-radius:50%;
+}
+
+/* Border image */
+.border{
+width:150px;
+border:5px solid black;
+}
+
+/* Right image */
+.right{
+width:150px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Image Operations Example</h2>
+
+<!-- Large Image -->
+<img src="https://picsum.photos/800/400" class="large">
+
+<!-- Three images in one row -->
+<div class="row">
+
+<img src="https://picsum.photos/200" class="circle">
+
+<img src="https://picsum.photos/201" class="border">
+
+<img src="https://picsum.photos/202" class="right">
+
+</div>
+
+</body>
+</html>

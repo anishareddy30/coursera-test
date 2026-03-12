@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Age and Salary Calculator</title>
+
+<style>
+body{
+font-family: Arial;
+background-color: lightblue;
+text-align: center;
+}
+
+.container{
+background-color: white;
+width: 350px;
+margin: 30px auto;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px gray;
+}
+
+button{
+padding: 8px 15px;
+margin-top: 10px;
+background-color: steelblue;
+color: white;
+border: none;
+cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Age and Salary Calculator</h2>
+
+<div class="container">
+
+<h3>Age Calculator</h3>
+
+Enter Date of Birth<br>
+<input type="date" id="dob"><br>
+
+<button onclick="calculateAge()">Calculate Age</button>
+
+<br><br>
+
+<h3>Salary Calculator</h3>
+
+Basic Salary<br>
+<input type="number" id="basic"><br><br>
+
+DA (%)<br>
+<input type="number" id="da"><br><br>
+
+HRA (%)<br>
+<input type="number" id="hra"><br>
+
+<button onclick="calculateSalary()">Calculate Total Salary</button>
+
+<br><br>
+
+<h3>Result</h3>
+<p id="result"></p>
+
+</div>
+
+<script>
+
+function calculateAge(){
+
+let dob = document.getElementById("dob").value;
+let birthYear = new Date(dob).getFullYear();
+let currentYear = new Date().getFullYear();
+
+let age = currentYear - birthYear;
+
+document.getElementById("result").innerHTML =
+"Your Age is: " + age + " years";
+
+}
+
+function calculateSalary(){
+
+let basic = parseFloat(document.getElementById("basic").value);
+let da = parseFloat(document.getElementById("da").value);
+let hra = parseFloat(document.getElementById("hra").value);
+
+let daAmount = basic * da / 100;
+let hraAmount = basic * hra / 100;
+
+let totalSalary = basic + daAmount + hraAmount;
+
+document.getElementById("result").innerHTML =
+"Total Salary: " + totalSalary;
+
+}
+
+</script>
+
+</body>
+</html>

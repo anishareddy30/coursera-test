@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Frame Layout</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+}
+
+/* Main container */
+.container{
+display:flex;
+height:100vh;
+}
+
+/* Frame 1 */
+.frame1{
+background:grey;
+width:20%;
+color:white;
+text-align:center;
+padding-top:50px;
+}
+
+/* Frame 2 */
+.frame2{
+background:red;
+width:20%;
+color:white;
+text-align:center;
+padding-top:50px;
+}
+
+/* Frame 3 */
+.frame3{
+background:white;
+width:30%;
+text-align:center;
+padding-top:50px;
+border:1px solid black;
+}
+
+/* Right side container */
+.right{
+width:30%;
+display:flex;
+flex-direction:column;
+}
+
+/* Frame 4 */
+.frame4{
+background:white;
+height:50%;
+text-align:center;
+padding-top:50px;
+border:1px solid black;
+}
+
+/* Frame 5 */
+.frame5{
+background:pink;
+height:50%;
+text-align:center;
+padding-top:50px;
+border:1px solid black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="frame1">
+Frame 1
+</div>
+
+<div class="frame2">
+Frame 2
+</div>
+
+<div class="frame3">
+Frame 3
+</div>
+
+<div class="right">
+
+<div class="frame4">
+Frame 4
+</div>
+
+<div class="frame5">
+Frame 5
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

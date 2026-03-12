@@ -1,0 +1,38 @@
+<!-- Question No: 26
+Change background color using JavaScript, on every click of button different colors
+should be applied to the background in order: yellow, red, green, purple, blue
+Note: refer the following image -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Background Color Change</title>
+
+<script>
+
+var colors = ["yellow","red","green","purple","blue"];
+var i = 0;
+
+function changeColor()
+{
+document.body.style.backgroundColor = colors[i];
+i++;
+
+if(i == colors.length)
+{
+i = 0;
+}
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Click the button to change background color</h2>
+
+<button onclick="changeColor()">Change Background Color</button>
+
+</body>
+</html>

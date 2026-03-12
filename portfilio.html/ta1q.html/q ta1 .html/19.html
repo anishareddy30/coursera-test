@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fruit Array Manager</title>
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+background-color:#f2f2f2;
+}
+
+button{
+padding:8px 15px;
+margin:5px;
+}
+</style>
+
+<script>
+
+var fruits = ["Apple","Mango","Orange"];
+
+function addFruit(){
+var f = prompt("Enter fruit to add:");
+fruits.push(f);
+alert(f + " has been added");
+}
+
+function removeFruit(){
+var f = prompt("Enter fruit to remove:");
+var index = fruits.indexOf(f);
+
+if(index != -1){
+fruits.splice(index,1);
+alert(f + " has been removed");
+}
+else{
+alert("Fruit not found");
+}
+}
+
+function displayFruit(){
+document.getElementById("result").innerHTML = "Current Fruits: " + fruits.join(", ");
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Fruit Array Manager</h2>
+
+<button onclick="addFruit()">Add Fruit</button>
+<button onclick="removeFruit()">Remove Fruit</button>
+<button onclick="displayFruit()">Display Fruits</button>
+
+<p id="result"></p>
+
+</body>
+</html>

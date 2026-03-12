@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hospital Registration Form</title>
+
+<style>
+
+body{
+background:#e6f2ff;
+font-family:Arial;
+}
+
+.container{
+width:500px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 0 10px gray;
+}
+
+h2{
+text-align:center;
+background:#4CAF50;
+color:white;
+padding:10px;
+}
+
+label{
+font-weight:bold;
+}
+
+input, select, textarea{
+width:100%;
+padding:8px;
+margin:5px 0 15px 0;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+button{
+background:#4CAF50;
+color:white;
+padding:10px;
+border:none;
+width:100%;
+font-size:16px;
+}
+
+button:hover{
+background:#45a049;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Hospital Registration Form</h2>
+
+<form>
+
+<label>Name</label>
+<input type="text" required>
+
+<label>Age</label>
+<input type="number">
+
+<label>Gender</label>
+<select>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+
+<label>Contact</label>
+<input type="text">
+
+<label>Email</label>
+<input type="email">
+
+<label>Address</label>
+<textarea></textarea>
+
+<label>Disease / Condition</label>
+<input type="text">
+
+<label>Doctor Name</label>
+<input type="text">
+
+<label>Referral</label>
+<input type="text">
+
+<button type="submit">Register</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

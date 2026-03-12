@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Heading Style Change</title>
+
+<script>
+
+function changeStyle(){
+
+var tcolor = document.getElementById("tcolor").value;
+var bcolor = document.getElementById("bcolor").value;
+var fsize = document.getElementById("fsize").value;
+
+var h = document.getElementById("head");
+
+h.style.color = tcolor;
+h.style.backgroundColor = bcolor;
+h.style.fontSize = fsize + "px";
+
+document.getElementById("result").innerHTML =
+tcolor + " " + bcolor + " " + fsize + "px";
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1 id="head" style="color:yellow; background:red;">
+This is Heading
+</h1>
+
+<br>
+
+Text Color:
+<input type="text" id="tcolor" placeholder="yellow">
+
+<br><br>
+
+Background Color:
+<input type="text" id="bcolor" placeholder="red">
+
+<br><br>
+
+Font Size:
+<input type="number" id="fsize" placeholder="20">
+
+<br><br>
+
+<button onclick="changeStyle()">Change Style</button>
+
+<p id="result"></p>
+
+</body>
+</html>

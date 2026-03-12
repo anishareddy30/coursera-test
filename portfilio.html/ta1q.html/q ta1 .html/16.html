@@ -1,0 +1,72 @@
+<!-- Question No: 16
+Write a JavaScript code which will show following output. Script should show desired
+box and message of operation on clicking corresponding box.
+Hint: Use of Events functions. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Login</title>
+
+<style>
+
+body{
+background-color: #ccff66;   /* lime yellow */
+font-family: Arial;
+text-align:center;
+}
+
+form{
+margin-top:100px;
+}
+
+input{
+padding:8px;
+margin:5px;
+}
+
+button{
+padding:8px 15px;
+}
+
+</style>
+
+<script>
+
+function login(){
+var id = document.getElementById("uid").value;
+var pass = document.getElementById("pwd").value;
+
+if(id=="" || pass=="")
+{
+alert("Please enter User ID and Password");
+}
+else
+{
+alert("Login Successful");
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>User Login Form</h2>
+
+<form>
+
+User ID:<br>
+<input type="text" id="uid"><br>
+
+Password:<br>
+<input type="password" id="pwd"><br><br>
+
+<button type="button" onclick="login()">Submit</button>
+
+</form>
+
+</body>
+</html>

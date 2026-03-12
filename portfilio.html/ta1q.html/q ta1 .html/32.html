@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh; /* Full viewport height */
+        }
+
+        /* Sidebar menu - left column */
+        .sidebar {
+            width: 25%;
+            background-color: red;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin: 10px 0;
+        }
+
+        /* Right column */
+        .main-column {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Green heading in right column */
+        .heading {
+            background-color: green;
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        /* Blue content area in right column */
+        .content {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            flex-grow: 1; /* takes remaining space */
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left sidebar -->
+        <div class="sidebar">
+            <h2>Sidebar Menu</h2>
+            <ul>
+                <li>Home</li>
+                <li>Products</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <!-- Right column -->
+        <div class="main-column">
+            <div class="heading">
+                My Colourful GUI
+            </div>
+            <div class="content">
+                Welcome, this is our main content area.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

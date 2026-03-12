@@ -1,0 +1,63 @@
+<!-- Question No: 12
+By using java scripts control structures, create one button on every click of button
+different colors should be applied to background.
+The output is as follow: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Background Color Change</title>
+
+<style>
+body{
+text-align:center;
+font-family:Arial;
+padding-top:100px;
+}
+
+button{
+padding:10px 20px;
+font-size:16px;
+}
+</style>
+
+<script>
+
+var i = 0;
+
+function changeColor(){
+
+if(i==0){
+document.body.style.backgroundColor="red";
+i=1;
+}
+
+else if(i==1){
+document.body.style.backgroundColor="green";
+i=2;
+}
+
+else if(i==2){
+document.body.style.backgroundColor="blue";
+i=3;
+}
+
+else if(i==3){
+document.body.style.backgroundColor="yellow";
+i=0;
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Click Button to Change Background Color</h2>
+
+<button onclick="changeColor()">Change Color</button>
+
+</body>
+</html>

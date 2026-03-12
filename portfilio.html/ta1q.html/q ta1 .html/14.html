@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Sorting</title>
+</head>
+
+<body>
+
+<h2>Sorted Numbers using Array</h2>
+
+<p id="num1"></p>
+<p id="num2"></p>
+
+<h2>Sorted Alphabets using Array</h2>
+
+<p id="alp1"></p>
+<p id="alp2"></p>
+
+<script>
+
+// Number Array
+var numbers = [];
+
+for(var i=0;i<10;i++){
+numbers[i] = parseInt(prompt("Enter Number "+(i+1)));
+}
+
+// Ascending
+var asc = numbers.slice().sort(function(a,b){return a-b;});
+document.getElementById("num1").innerHTML = asc.join(", ");
+
+// Descending
+var desc = numbers.slice().sort(function(a,b){return b-a;});
+document.getElementById("num2").innerHTML = desc.join(", ");
+
+
+// Alphabet Array
+var alphabets = ["a","b","c","d","e"];
+
+// Ascending
+var a1 = alphabets.slice().sort();
+document.getElementById("alp1").innerHTML = a1.join(", ");
+
+// Descending
+var a2 = alphabets.slice().sort().reverse();
+document.getElementById("alp2").innerHTML = a2.join(", ");
+
+</script>
+
+</body>
+</html>

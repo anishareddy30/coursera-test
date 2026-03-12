@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Area Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            background-color: #66bb6a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #388e3c;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Triangle Area Calculator</h2>
+    <p>Sides of triangle: 5, 6, 7</p>
+    <button onclick="calculateArea()">Calculate Area</button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateArea() {
+            // Side lengths
+            const a = 5;
+            const b = 6;
+            const c = 7;
+
+            // Heron's formula
+            const s = (a + b + c) / 2;
+            const area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+
+            // Display result
+            document.getElementById("result").textContent = 
+                `Area of the triangle with sides 5, 6, 7 is ${area.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+</html>

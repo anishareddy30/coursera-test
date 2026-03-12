@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Calculator</title>
+
+<style>
+
+body{
+background-color:lightgreen; /* parrot green */
+font-family:Arial;
+text-align:center;
+padding-top:50px;
+}
+
+.calculator{
+background:white;
+width:300px;
+margin:auto;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+
+input{
+width:90%;
+padding:8px;
+margin:8px;
+}
+
+button{
+padding:10px 15px;
+margin:5px;
+font-size:14px;
+}
+
+#result{
+margin-top:10px;
+font-weight:bold;
+}
+
+</style>
+
+<script>
+
+function add(){
+var n1=parseFloat(document.getElementById("num1").value);
+var n2=parseFloat(document.getElementById("num2").value);
+document.getElementById("result").innerHTML="Result: "+(n1+n2);
+}
+
+function sub(){
+var n1=parseFloat(document.getElementById("num1").value);
+var n2=parseFloat(document.getElementById("num2").value);
+document.getElementById("result").innerHTML="Result: "+(n1-n2);
+}
+
+function mul(){
+var n1=parseFloat(document.getElementById("num1").value);
+var n2=parseFloat(document.getElementById("num2").value);
+document.getElementById("result").innerHTML="Result: "+(n1*n2);
+}
+
+function div(){
+var n1=parseFloat(document.getElementById("num1").value);
+var n2=parseFloat(document.getElementById("num2").value);
+document.getElementById("result").innerHTML="Result: "+(n1/n2);
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="calculator">
+
+<h2>Simple Calculator</h2>
+
+Enter Number 1<br>
+<input type="number" id="num1"><br>
+
+Enter Number 2<br>
+<input type="number" id="num2"><br>
+
+<button onclick="add()">Add</button>
+<button onclick="sub()">Subtract</button>
+<button onclick="mul()">Multiply</button>
+<button onclick="div()">Divide</button>
+
+<p id="result"></p>
+
+</div>
+
+</body>
+</html>

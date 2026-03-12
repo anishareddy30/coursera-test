@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Colored Rows</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px 12px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            background-color: #66bb6a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Append Colored Rows to Table</h2>
+
+    <button onclick="addRow()">Add Row</button>
+
+    <table id="colorTable">
+        <tr>
+            <th>Row Index</th>
+            <th>Color</th>
+        </tr>
+    </table>
+
+    <script>
+        // Predefined colors
+        const colors = ["red", "green", "blue", "yellow", "orange", "pink", "purple"];
+        let rowIndex = 0; // keep track of rows added
+
+        function addRow() {
+            const table = document.getElementById("colorTable");
+            
+            // Calculate color index to loop through colors array
+            const color = colors[rowIndex % colors.length];
+
+            // Insert new row at the end
+            const newRow = table.insertRow();
+            
+            // Insert cells
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+
+            // Set content
+            cell1.textContent = rowIndex + 1; // Row index (1-based)
+            cell2.textContent = color;
+
+            // Set background color of the row
+            newRow.style.backgroundColor = color;
+
+            // Increment rowIndex for next row
+            rowIndex++;
+        }
+    </script>
+
+</body>
+</html>

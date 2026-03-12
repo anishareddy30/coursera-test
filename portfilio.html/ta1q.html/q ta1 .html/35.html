@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome Check</title>
+</head>
+<body>
+
+    <h2>Palindrome Checker</h2>
+    <button onclick="checkPalindrome()">Check Palindrome</button>
+
+    <script>
+        function checkPalindrome() {
+            let str = prompt("Enter a string to check if it's a palindrome:");
+            if (!str) return;
+
+            // Remove spaces and make lowercase for uniform check
+            let cleanStr = str.replace(/\s+/g, '').toLowerCase();
+            let reversedStr = cleanStr.split('').reverse().join('');
+
+            if (cleanStr === reversedStr) {
+                alert(`"${str}" is a palindrome.`);
+            } else {
+                alert(`"${str}" is not a palindrome.`);
+            }
+        }
+    </script>
+
+</body>
+</html>

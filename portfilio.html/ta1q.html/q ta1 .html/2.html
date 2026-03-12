@@ -1,0 +1,85 @@
+<!-- Question No: 2
+Create a form with text input, email input, dropdown, radio buttons, checkbox, and a
+submit button, and use CSS selectors to style the inputs with borders, the button with a
+background color, and the radio buttons with size, and style the checked checkbox.
+Hint: Use CSS selectors to target and style each form element individually based on its
+type and state. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Styled Form</title>
+
+<style>
+
+/* Style text and email inputs */
+input[type="text"], input[type="email"]{
+    border: 2px solid blue;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* Style dropdown */
+select{
+    border: 2px solid green;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* Style radio buttons (increase size) */
+input[type="radio"]{
+    width: 20px;
+    height: 20px;
+}
+
+/* Style checked checkbox */
+input[type="checkbox"]:checked{
+    accent-color: red;
+}
+
+/* Style submit button */
+input[type="submit"]{
+    background-color: orange;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Registration Form</h2>
+
+<form>
+
+Name:  
+<input type="text" placeholder="Enter your name"><br><br>
+
+Email:  
+<input type="email" placeholder="Enter your email"><br><br>
+
+Course:  
+<select>
+<option>HTML</option>
+<option>CSS</option>
+<option>JavaScript</option>
+</select><br><br>
+
+Gender:  
+<input type="radio" name="gender"> Male  
+<input type="radio" name="gender"> Female  
+<br><br>
+
+Accept Terms:  
+<input type="checkbox"> I Agree  
+<br><br>
+
+<input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
