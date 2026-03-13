@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Change Image on Button Click</title>
+</head>
+
+<body>
+
+<h2>Click Button to Change Image</h2>
+
+<img id="myImage" src="https://via.placeholder.com/200/ff0000" width="200">
+
+<br><br>
+
+<button onclick="changeImage()">Change Image</button>
+
+<script>
+let images = [
+"https://img.freepik.com/free-photo/digital-art-style-river-nature-landscape_23-2151825665.jpg?semt=ais_hybrid&w=740&q=80",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfWCAREfc3zcThRvBkbpEuZbRjigtnDt2myg&s",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ166ed-fWAPg5w-WuWQV6-aBF8x788XYRHfA&s",
+"https://img.freepik.com/free-photo/beautiful-fantasy-landscape_23-2151890265.jpg?semt=ais_hybrid&w=740&q=80"
+];
+
+let index = 0;
+
+function changeImage() {
+    index = (index + 1) % images.length;
+    document.getElementById("myImage").src = images[index];
+}
+</script>
+
+</body>
+</html>

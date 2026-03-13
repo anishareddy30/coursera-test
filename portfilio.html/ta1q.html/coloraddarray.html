@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color Array</title>
+</head>
+<body>
+
+<h3>Color List:</h3>
+<p id="colorList"></p>
+
+<button onclick="addColor()">Add Color</button>
+
+<script>
+let colors = ["Red", "Green", "Blue"];
+
+function showColors() {
+    document.getElementById("colorList").innerHTML = colors.join(", ");
+}
+
+function addColor() {
+    let userColor = prompt("Enter a color:");
+
+    if (!colors.includes(userColor)) {
+        colors.push(userColor);
+        alert("Color added!");
+    } else {
+        alert("Color already exists!");
+    }
+
+    showColors();
+}
+
+showColors();
+</script>
+
+</body>
+</html>

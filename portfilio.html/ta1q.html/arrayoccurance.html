@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Character Occurrence</title>
+</head>
+<body>
+
+<button onclick="countChar()">Count Character</button>
+
+<p id="result"></p>
+
+<script>
+function countChar() {
+
+    let arr = ['a','b','a','c','z'];
+    let ch = prompt("Enter character to check:");
+    let count = 0;
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] === ch) {
+            count++;
+        }
+    }
+
+    document.getElementById("result").innerHTML =
+    "Occurrences of " + ch + " is " + count;
+}
+</script>
+
+</body>
+</html>

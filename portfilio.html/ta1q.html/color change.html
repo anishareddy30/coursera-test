@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Colour Changer </title>
+<style>
+ #box {
+	width: 300px;
+	height: 200px;
+	border: 2px solid black;
+	margin-top: 20px;
+	text-align: center;
+	line-height: 200px;
+	font-size: 20px;
+	}
+
+</style>
+</head>
+<body>
+
+<h2>Enter a colour name or code: <h2>
+<input type = "text" id = "colorInput" placeholder ="red">
+<br><br>
+
+<button onclick = " applyColor()">Apply Entered Color </button>
+<button onclick = " changeColor()">Random Colour </button>
+
+<div id ="box" style = "background-color: red" > Color Box </div>
+
+<script>
+function applyColor() {
+let color = document.getElementById("colorInput").value;
+	document.getElementById("box").style.backgroundColor= color;
+
+}
+
+
+// Array of colors
+let colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink"];
+
+let index = 0;
+
+function changeColor() {
+document.getElementById("box").style.backgroundColor = colors[index];
+index++;
+
+ if(index >= colors.length) {
+        index = 0;
+    }
+
+}
+</script>
+</body>
+</html> 
+

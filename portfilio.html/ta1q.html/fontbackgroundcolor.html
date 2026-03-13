@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color Change</title>
+</head>
+<body>
+
+<h2 id="heading">Hello World</h2>
+
+<label>Font Color:</label>
+<select id="fontColor">
+<option value="red">Red</option>
+<option value="green">Green</option>
+<option value="blue">Blue</option>
+<option value="yellow">Yellow</option>
+</select>
+
+<br><br>
+
+<label>Background Color:</label>
+<select id="bgColor">
+<option value="red">Red</option>
+<option value="green">Green</option>
+<option value="blue">Blue</option>
+<option value="yellow">Yellow</option>
+</select>
+
+<br><br>
+
+<button onclick="applyColor()">Apply</button>
+
+<script>
+function applyColor() {
+    let font = document.getElementById("fontColor").value;
+    let bg = document.getElementById("bgColor").value;
+
+    if (font !== bg) {
+        document.getElementById("heading").style.color = font;
+        document.getElementById("heading").style.backgroundColor = bg;
+    } 
+    else {
+        alert("Font color and background color cannot be the same.");
+    }
+}
+</script>
+
+</body>
+</html>

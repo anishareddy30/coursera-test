@@ -1,0 +1,46 @@
+table{
+border-collapse: collapse;
+margin: 50px auto;
+}
+
+td{
+width:150px;
+height:60px;
+text-align:center;
+font-weight:bold;
+border:1px solid black;
+color:white;
+}
+
+.tomato{
+background-color: tomato;
+}
+
+.orange{
+background-color: orange;
+}
+
+.gray{
+background-color: gray;
+}
+
+.steelblue{
+background-color: steelblue;
+}
+
+.dodgerblue{
+background-color: dodgerblue;
+}
+
+.seagreen{
+background-color: seagreen;
+}
+
+.violet{
+background-color: violet;
+}
+
+.lightgrey{
+background-color: lightgrey;
+color:black;
+}
