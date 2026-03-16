@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>style form example</title>
+        <style>
+            input[type=text] , input[type=email]{
+                border: 2px solid green;
+                margin: 5px;
+                padding: 5px;
+            }
+            select{
+                border: 2px solid green;
+                padding: 5px;
+                margin: 5px;
+            }
+            
+            input[type="radio"]{
+                width:20px;
+                height: 20px;
+            }
+            input[type="checkbox"]:checked{
+                accent-color: red;
+            }
+
+            input[type="submit"]{
+                background-color: green;
+                color: aliceblue;
+                padding: 8px 15px;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <h2>student registration form</h2>
+        <form>
+        name:
+        <input type="text" placeholder="enter your name" ><br><br>
+        email:
+        <input type="email" placeholder="enter your email"><br><br>
+        gender:
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">feamle
+        <br><br>
+        country:
+        <select>
+            <option>indiA</option>
+            <option>uk</option>
+            <option>us</option>
+        </select>
+        <br><br>
+        i agree:
+        <input type="checkbox">
+        <br><br>
+
+       
+        <input type="submit" value="submit">
+        <br><br>
+        </form>
+
+    </body>
+</html>
